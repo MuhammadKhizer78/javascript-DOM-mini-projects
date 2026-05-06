@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 50vh;
+        }
+        button{
+            border: 1px solid black;
+            padding: 25px;
+            border-radius: 10px;
+            background-color: beige;
+        }
+        h1{ color: red; }
+    </style>
+</head>
+<body>
+    <button class="button">DICE 🎲</button>
+    <h1></h1>
+</body>
+<script>
+    let btn = document.querySelector("button");
+    let headOne = document.querySelector("h1");
+
+    btn.addEventListener("click", function(){
+        let random = Math.ceil(Math.random() * 6);
+        headOne.textContent = random;
+    })
+</script>
+</html>
