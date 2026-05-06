@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            flex-direction: column;
+            margin: 0;
+            background-color: lightgray;
+        }
+        button{
+            border: 2px solid black;
+            width: 90%;
+            max-width: 250px;
+            height: 50px;
+            border-radius: 20px;
+            padding: 10px;
+            background-color: blue;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            margin-bottom: 20px;
+        }
+        h4{
+            display: flex;
+            border: 3px solid black;
+            width: 90%;
+            max-width: 600px;
+            padding: 20px;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            background-color: white;
+            direction: rtl;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            font-size: 20px;
+            line-height: 1.6;
+        }
+    </style>
+</head>
+
+<body>
+    <button>For dua. Click!</button>
+    <h4></h4>
+</body>
+
+<script>
+    let duas = [
+        "وَأُفَوِّضُ أَمْرِي إِلَى اللَّهِ ۚ إِنَّ اللَّهَ بَصِيرٌ بِالْعِبَادِ",
+        "مَا شَاءَ اللَّهُ لَا قُوَّةَ إِلَّا بِاللَّهِ",
+        "لَّا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ",
+        "حَسْبُنَا اللَّهُ وَنِعْمَ الْوَكِيلُ",
+        "اللهُ اللهُ رَبِّي اَلرَّحْمَنُ الرَّحِيمُ لَا اُشْرِكُ بِهِ شَيْءً",
+        "يَا مَنْ يَّكْفِىْ مِنْ كُلِّ شَيْءٍ وَلَا يَكْفِى مِنْهُ شَيْءٌ اِكْفِنِي مَآ أَهَمَّنِي",
+        "اَلْحَمْدُ لِلَّهِ الَّذِي خَلَقَنَا مِنْ نُورِهِ",
+        "عبدُكَ بِفَضْلِكَ , سائلُكَ بِفَضْلِكَ , مسكينُكَ بِفَضْلِكَ",
+        "اَللَّهُمَّ اِنِّي اَسْأَلُكَ الْعَافِيَةَ",
+        "لَا اِلَهَ اِلَّا اللهُ الْمَلِكُ الْحَقُّ"
+    ];
+
+    let btn = document.querySelector("button");
+    let text = document.querySelector("h4");
+
+    btn.addEventListener("click", ()=>{
+        let random = Math.floor(Math.random() * duas.length);
+        text.textContent = duas[random];
+    })
+</script>
+</html>
