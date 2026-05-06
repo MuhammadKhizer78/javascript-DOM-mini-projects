@@ -3,26 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Dice App</title>
     <style>
         body{
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            height: 50vh;
+            height: 100vh;
+            margin: 0;
+            background: lavender;
+            font-family: Arial, sans-serif;
         }
         button{
             border: 1px solid black;
-            padding: 25px;
-            border-radius: 10px;
-            background-color: beige;
+            padding: 25px 40px;
+            border-radius: 12px;
+            background-color: lightyellow;
+            cursor: pointer;
+            font-size: 18px;
+            transition: 0.3s;
         }
-        h1{ color: red; }
+        button:hover{
+            background-color: khaki;
+        }
+        h1{ 
+            color: darkred;
+            font-size: 60px;
+            margin-top: 20px;
+        }
     </style>
 </head>
 <body>
-    <button class="button">DICE 🎲</button>
+    <button class="button">Roll 🎲</button>
     <h1></h1>
 </body>
 <script>
